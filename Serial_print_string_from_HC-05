@@ -1,0 +1,24 @@
+
+//Created by Akshay Joseph and inspired by Josh
+//Sketch for print  for serially recived data to serial menitor  
+
+String s;
+void setup() {
+ Serial.begin(9600);
+
+}
+
+void loop() {
+ if(Serial.available()>0){
+  s=Serial.readString();
+  
+  if(s=="xclearnow"){
+    Serial.println("clear button pressed");
+   
+  }
+  else{
+    Serial.println(s);
+  }
+ }
+
+}
